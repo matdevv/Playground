@@ -4,13 +4,12 @@ local _services = TS.import(script, game:GetService("ReplicatedStorage"), "rbxts
 local UserInputService = _services.UserInputService
 local ReplicatedStorage = _services.ReplicatedStorage
 local keyPressEvent = ReplicatedStorage:WaitForChild("KeyPressEvent")
--- Function to detect key presses
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
-	if gameProcessed then
+	if gameProcessed == true then
 		return nil
 	end
 	if input.KeyCode == Enum.KeyCode.E then
-		print("E key pressed! Sending to server...")
-		keyPressEvent:FireServer("E")
+		print("E key pressed! Sending to server...er")
+		keyPressEvent:FireServer()
 	end
 end)
