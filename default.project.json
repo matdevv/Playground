@@ -12,6 +12,12 @@
 				"$path": "out/server"
 			}
 		},
+		"ServerStorage": {
+			"$className": "ServerStorage",
+			"Handlers": {
+				"$path": "out/handlers"
+			}
+		},
 		"ReplicatedStorage": {
 			"$className": "ReplicatedStorage",
 			"rbxts_include": {
@@ -31,13 +37,13 @@
 			"$className": "StarterPlayer",
 			"StarterPlayerScripts": {
 				"$className": "StarterPlayerScripts",
-				"TS": {
+				"PlayerScripts": {
 					"$path": "out/client/player"
 				}
 			},
 			"StarterCharacterScripts": {
 				"$className": "StarterCharacterScripts",
-				"TS": {
+				"CharacterScripts": {
 					"$path": "out/client/character"
 				}
 			}
