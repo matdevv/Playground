@@ -9,7 +9,7 @@ UserInputService.InputBegan.Connect((input, gameProcessed) => {
 
 	if (input.KeyCode === Enum.KeyCode.E) {
 		// Change this key to whatever you want
-		print("E key pressed! Sending to server...");
+		print("E key pressed! Sending to server");
 		keyPressEvent.FireServer("E");
 	}
 });
