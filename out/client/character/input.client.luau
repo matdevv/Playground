@@ -3,10 +3,10 @@ local TS = require(game:GetService("ReplicatedStorage"):WaitForChild("rbxts_incl
 local UserInputService = TS.import(script, game:GetService("ReplicatedStorage"), "rbxts_include", "node_modules", "@rbxts", "services").UserInputService
 --const keyPressEvent = ReplicatedStorage.WaitForChild("KeyPressEvent") as RemoteEvent;
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
-	if gameProcessed == true then
+	if gameProcessed then
 		return nil
 	end
 	if input.KeyCode == Enum.KeyCode.E then
-		print("pressed by the chairman!")
+		print("input test")
 	end
 end)

@@ -1,9 +1,10 @@
 import { Players, Workspace } from "@rbxts/services";
 import { makeHello } from "shared/module";
-import { playerManager } from "handlers/gameHandler";
+import { playerManager, board } from "handlers/gameHandler";
 import { Character } from "types/gameTypes";
 
 const manager = new playerManager();
+const chessBoard = new board();
 
 Players.PlayerAdded.Connect((plr) => {
 	manager.playerJoin(plr);
@@ -17,5 +18,7 @@ Players.PlayerAdded.Connect((plr) => {
 		copy.HumanoidRootPart.Position = new Vector3(0, 5, 0);
 	});
 });
+
+chessBoard.createBoard();
 
 // print(makeHello("hey bro!"));
